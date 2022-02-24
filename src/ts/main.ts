@@ -1,4 +1,4 @@
-import { Home } from "./portfolio/home";
+import {Home} from './portfolio/home';
 
 const home = new Home();
 window.onload = function() {
