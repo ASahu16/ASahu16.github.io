@@ -32,7 +32,10 @@ body {
 
 body {
   width: 100vw;
-  min-height: 100vh;
-  display: grid;
+  height: 100vh;
   scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
