@@ -44,3 +44,8 @@ var tsify = require("tsify");
 
 gulp.task('default', gulp.series( buildTypescript, buildScss),
 );
+
+gulp.task('watch', function(){
+  gulp.watch('src/ts/**/*.ts',buildTypescript);
+  gulp.watch('src/scss/**/*.scss',buildScss);
+});
