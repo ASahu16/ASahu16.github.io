@@ -1,14 +1,27 @@
 :root {
-  --clr-foreground: black;
   --clr-background: white;
+  --clr-foreground: black;
+  --clr-bg-about: #bdd3d8;
+  --clr-fg-about: rgb(248, 248, 248);
+  --clr-bg-home: #141313;
+  --clr-fg-home: rgb(248, 248, 248);
+
 }
 
 .light-theme {
-  --clr-foreground: black;
   --clr-background: white;
+  --clr-foreground: black;
+  --clr-bg-about: #bdd3d8;
+  --clr-fg-about: rgb(248, 248, 248);
+  --clr-bg-home: #141313;
+  --clr-fg-home: rgb(248, 248, 248);
 }
 
 .dark-theme {
   --clr-background: black;
   --clr-foreground: white;
+  --clr-bg-about: #422c27;
+  --clr-fg-about: rgb(7, 7, 7);
+  --clr-bg-home: #ebecec;
+  --clr-fg-home: rgb(7, 7, 7);
 }

@@ -28,8 +28,8 @@ export class Home {
    * @return {HTMLElement} The tagline for the home section
    */
   _tagline():HTMLElement {
-    const tagline1 = 'Hi,';
-    const tagline2 = 'I\'m Abhishek Sahu';
+    const tagline1 = 'Welcome to My World';
+    const tagline2 = 'Hi I\'m Abhishek Sahu';
     // const tagline3 = 'A developer';
     const container = document.createElement('div');
     container.className = 'tagline';
