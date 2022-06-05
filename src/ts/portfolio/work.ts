@@ -85,6 +85,32 @@ export class Work {
     //   container.appendChild(img)
     // }
     container.append(bg, preview, content);
+
+    container.addEventListener('mousemove',(event)=>{
+      const currCard = event.currentTarget! as HTMLElement;
+      let mouseX = event.clientX;
+      let mouseY = event.clientY;
+      let degrees = 20;
+      let ry = 2*(mouseX- (currCard.getBoundingClientRect().left+(currCard.offsetWidth/2)))/(currCard.offsetWidth);
+       let rx = 2*(currCard.getBoundingClientRect().top+(currCard.offsetHeight/2)-mouseY)/(currCard.offsetHeight);
+      currCard.style.transform = "rotate3d("+rx+","+ry+",0,"+degrees+"deg) scale(1.1)";
+
+      const imgEle = currCard.querySelector('img');
+      // TODO: fix parallex effect on card 
+      // imgEle!.style.boxShadow = 3*-ry+"px "+3*rx+"px 5px 3px rgba(0,0,0,0.4)";
+      // currCard.style.boxShadow = 3*-ry+"px "+3*rx+"px 5px 3px rgba(0,0,0,0.4)";
+      // currCard.getElementsByClassName("card-number")[0].style.textShadow = 4*-ry+"px "+3*rx+"px 3px rgba(0,0,0,0.8)";
+    });
+    
+    container.addEventListener('mouseout',(event)=>{
+      let currCard = event.currentTarget! as HTMLElement;
+      // console.log(currCard);
+      currCard.style.transform = "";
+      currCard.style.boxShadow = "none";
+      // currCard.getElementsByClassName("card-number")[0].style.textShadow = "0px 0px 4px rgba(0,0,0,0.8)";
+    });
+
+
     return container;
   }
 }
