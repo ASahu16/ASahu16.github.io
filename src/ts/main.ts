@@ -7,6 +7,7 @@ const home = new Home();
 const work = new Work();
 const contact = new Contact();
 const themeBtn = new FloatingButton();
+// Render container
 window.onload = function() {
   themeBtn.build();
   home.build();
