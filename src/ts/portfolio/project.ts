@@ -20,11 +20,15 @@ export class Projects {
     const projectSection = document.createElement('section');
     projectSection.className = 'project';
     projectSection.id = 'project';
+
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('project-wrapper');
     // projectSection.appendChild(this._tagline());
     projects.result.forEach((data) => {
-      projectSection.append(
+      wrapper.appendChild(
           this._projectContainer(data.title, data.description, data.imgSet));
     });
+    projectSection.appendChild(wrapper);
     return projectSection;
   }
 

@@ -1,15 +1,10 @@
 body {
+
   section.project {
-    transition: 1.2s;
-    max-width: var(--max-layout-width);
     width: 100%;
     background-color: var(--clr-bg-projects);
-    padding: 3rem 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    align-items: start;
     justify-items: center;
-    grid-gap: 3rem 3rem;
 
     .tagline {
       span {
@@ -20,83 +15,94 @@ body {
       }
     }
 
-    .itemContainer {
-      display: grid;
-      grid:
-        "preview" minmax(56.25%, auto) 
-        "content" auto/minmax(0, 100%);
-      color: var(--clr-card-fg);
-      position: relative;
+    .project-wrapper {
+      transition: 1.2s;
+      max-width: var(--max-layout-width);
       width: 100%;
-      height: 100%;
-      z-index: 1;
+      margin: 3rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      align-items: start;
+      justify-items: center;
+      grid-gap: 3rem 3rem;
 
-      .bg {
-        --radius: 10px;
-        --inset: 2rem;
-        --inset-right: 0;
-        --offset: -1rem;
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: var(--radius);
-        overflow: hidden;
-        background: var(--clr-card-bg);
-        clip-path: inset(var(--inset-top, var(--inset)) var(--inset-right, var(--inset)) var(--inset-bottom, var(--inset)) var(--inset-left, var(--inset)) round var(--radius));
-        contain: strict;
-        transition: clip-path .3s ease .1s;
-      }
-
-      .preview {
-        grid-area: preview;
-        opacity: .99;
-        position: relative;
-        border-radius: 6px;
-        overflow: hidden;
+      .itemContainer {
         display: grid;
-        align-items: stretch;
+        grid:
+          "preview" minmax(56.25%, auto) "content" auto/minmax(0, 100%);
+        color: var(--clr-card-fg);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
 
-        img {
-          max-width: 400px;
-          max-height: 350px;
-          object-fit: cover;
+        .bg {
+          --radius: 10px;
+          --inset: 2rem;
+          --inset-right: 0;
+          --offset: -1rem;
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: var(--radius);
+          overflow: hidden;
+          background: var(--clr-card-bg);
+          clip-path: inset(var(--inset-top, var(--inset)) var(--inset-right, var(--inset)) var(--inset-bottom, var(--inset)) var(--inset-left, var(--inset)) round var(--radius));
+          contain: strict;
+          transition: clip-path .3s ease .1s;
+        }
+
+        .preview {
+          grid-area: preview;
+          opacity: .99;
+          position: relative;
           border-radius: 6px;
-        }
-      }
-
-      .content {
-        grid-area: content;
-
-        h1 {
-          position: relative;
-          font-size: 1.5rem;
-          font-weight: 500;
-          line-height: 2rem;
-          border-bottom: 2px solid var(--clr-divider);
-          margin-block: 0.75rem;
-          color: var(--clr-item-title);
-          text-overflow: ellipsis;
           overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
-          transition: 1.2s;
+          display: grid;
+          align-items: stretch;
+
+          img {
+            max-width: 400px;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+          }
         }
 
-        p {
-          position: relative;
-          color: var(--clr-item-subtitle);
-          font-size: 0.875rem;
-          max-height: 2.4rem;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          transition: 1.2s;
+        .content {
+          grid-area: content;
+
+          h1 {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2rem;
+            border-bottom: 2px solid var(--clr-divider);
+            margin-block: 0.75rem;
+            color: var(--clr-item-title);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            transition: 1.2s;
+          }
+
+          p {
+            position: relative;
+            color: var(--clr-item-subtitle);
+            font-size: 0.875rem;
+            max-height: 2.4rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            transition: 1.2s;
+          }
         }
       }
     }
