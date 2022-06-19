@@ -3,27 +3,32 @@
     {
       "title":"National Library",
       "description":"National Library is a window based application in which the whole records of the books in the library would be managing the details about different students who have received the books would be kept.",
-      "imgSet":["https://sahu.netlify.app/images/nationalibrary.jpg"]
+      "imgSet":["https://sahu.netlify.app/images/nationalibrary.jpg"],
+      "link":"https://www.youtube.com/watch?v=XJIRcwg7nhM&t=18s"
     },    
     {
       "title":"Payroll Management.",
       "description":"Payroll Management System is a corporate sector oriented software for management of salary and associated services in a company.",
-      "imgSet":["https://sahu.netlify.app/images/payroll.png"]
+      "imgSet":["https://sahu.netlify.app/images/payroll.png"],
+      "link":"https://github.com/ASahu16/Payroll"
     },   
     {
       "title":"DDUKK Stock Management.",
       "description":"This project is aimed at developing a desktop based application named DDUKK - Stock Management System for managing the assets of any organization. This system can be used to store the details of the inventory, stock maintenance, update the inventory.",
-      "imgSet":["https://sahu.netlify.app/images/ddukk.jpg"]
+      "imgSet":["https://sahu.netlify.app/images/ddukk.jpg"],
+      "link":"https://www.youtube.com/watch?v=jViwjbtbpa8&t=15s"
     },
     {
       "title":"Echo Music Player",
       "description":"An android music player application with features like shake to change, visualizer, mark as favorite and basic functionalities that a music player can provide. This Music Player App is made for learning to build User Interfaces, add Functionalities, Building Echo modules using Kotlin.",
-      "imgSet":["https://sahu.netlify.app/images/echomusicplayer.png"]
+      "imgSet":["https://sahu.netlify.app/images/echomusicplayer.png"],
+      "link":"https://github.com/ASahu16/Music-App-Android-Java"
     },
     {
       "title":"Raktamrit.com",
       "description":"An online blood bank management system that helps in managing various blood bank operations effectively. The entire project has been developed keeping in view of the distributed client server computing technology, in mind. Any person who is interested in donating the blood can register himself. ",
-      "imgSet":["https://sahu.netlify.app/images/bloodbank.jpg"]
+      "imgSet":["https://sahu.netlify.app/images/bloodbank.jpg"],
+      "link":"https://www.youtube.com/watch?v=qfUmBn5H4xs"
     }
   ]
 }

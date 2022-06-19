@@ -1,4 +1,4 @@
-import * as projects from '../fixture/projectsData.json';
+import * as projectList from '../fixture/projectsData.json';
 /**
  * Renders project section
  */
@@ -24,9 +24,12 @@ export class Projects {
     const wrapper = document.createElement('div');
     wrapper.classList.add('project-wrapper');
     // projectSection.appendChild(this._tagline());
-    projects.result.forEach((data) => {
+    projectList.result.forEach((data) => {
       wrapper.appendChild(
-          this._projectContainer(data.title, data.description, data.imgSet));
+          this._projectContainer(data.title,
+              data.description,
+              data.link,
+              data.imgSet));
     });
     projectSection.appendChild(wrapper);
     return projectSection;
@@ -54,25 +57,28 @@ export class Projects {
    *
    * @param {string} titleText - title of the project
    * @param {string} descriptionText - project description
+   * @param {string} projectUrl - url to the project demo/code
    * @param {string[]} imgSet - Array of imges associated with project
    * @return {HTMLElement} - project html element
    */
   _projectContainer(
       titleText: string,
       descriptionText: string,
+      projectUrl: string,
       imgSet?: string[]): HTMLElement {
-    const container: HTMLElement = document.createElement('article');
+    const container: HTMLElement = document.createElement('a');
+    container.setAttribute('href', projectUrl);
     container.className = 'itemContainer';
 
     const itemShowcase = document.createElement('div');
     itemShowcase.className = 'item-showcase';
-    
+
     if (imgSet) {
       const img = document.createElement('img');
       img.setAttribute('src', imgSet[0]);
       itemShowcase.appendChild(img);
     }
-    
+
     const itemDetail = document.createElement('div');
     itemDetail.className = 'item-detail';
 
@@ -81,7 +87,7 @@ export class Projects {
     title.innerText = titleText;
 
     itemDetail.append(title);
-    container.append( itemShowcase, itemDetail);
+    container.append(itemShowcase, itemDetail);
     return container;
   }
 }
