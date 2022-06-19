@@ -18,13 +18,19 @@ body {
     .project-wrapper {
       transition: 1.2s;
       max-width: var(--max-layout-width);
-      width: 100%;
       margin: 3rem 5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       align-items: start;
       justify-items: center;
       grid-gap: 3rem 3rem;
+
+      @include responsive-tablet{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include responsive-large{
+        grid-template-columns: repeat(3 , 1fr);
+      }
 
       .itemContainer {
         display: grid;
