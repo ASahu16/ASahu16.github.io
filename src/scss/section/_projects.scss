@@ -28,7 +28,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @include responsive-large{
+      @include responsive-extra-large{
         grid-template-columns: repeat(3 , 1fr);
       }
 
