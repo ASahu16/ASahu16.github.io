@@ -64,31 +64,24 @@ export class Projects {
     const container: HTMLElement = document.createElement('article');
     container.className = 'itemContainer';
 
-    const bg = document.createElement('div');
-    bg.className = 'bg';
-    const preview = document.createElement('div');
-    preview.className = 'preview';
+    const itemShowcase = document.createElement('div');
+    itemShowcase.className = 'item-showcase';
+    
     if (imgSet) {
       const img = document.createElement('img');
       img.setAttribute('src', imgSet[0]);
-      preview.appendChild(img);
+      itemShowcase.appendChild(img);
     }
-    const content = document.createElement('div');
-    content.className = 'content';
+    
+    const itemDetail = document.createElement('div');
+    itemDetail.className = 'item-detail';
 
 
     const title = document.createElement('h1');
     title.innerText = titleText;
-    // const description = document.createElement('p');
-    // description.innerText = descriptionText;
 
-    content.append(title);
-    // if (imgSet) {
-    //   const img = document.createElement('img');
-    //   img.setAttribute('src', imgSet[0]);
-    //   container.appendChild(img)
-    // }
-    container.append(bg, preview, content);
+    itemDetail.append(title);
+    container.append( itemShowcase, itemDetail);
     return container;
   }
 }
