@@ -1,8 +1,8 @@
-import * as projects from '../fixture/work.json';
+import * as projects from '../fixture/projectsData.json';
 /**
- * Renders work section
+ * Renders project section
  */
-export class Work {
+export class Projects {
   /**
    * Responsible to created the whole section/screen
    */
@@ -13,27 +13,27 @@ export class Work {
   }
 
   /**
-  * Creates whole work section
-  * @return {HTMLElement} The work section
+  * Creates whole project section
+  * @return {HTMLElement} The project section
   */
   _section(): HTMLElement {
-    const workSection = document.createElement('section');
-    workSection.className = 'work';
-    workSection.id = 'work';
-    // workSection.appendChild(this._tagline());
+    const projectSection = document.createElement('section');
+    projectSection.className = 'project';
+    projectSection.id = 'project';
+    // projectSection.appendChild(this._tagline());
     projects.result.forEach((data) => {
-      workSection.append(
-          this._workContainer(data.title, data.description, data.imgSet));
+      projectSection.append(
+          this._projectContainer(data.title, data.description, data.imgSet));
     });
-    return workSection;
+    return projectSection;
   }
 
   /**
    * Create a tagline div
-   * @return {HTMLElement} The tagline for the work section
+   * @return {HTMLElement} The tagline for the project section
    */
   _tagline(): HTMLElement {
-    const tagline1 = '# Work ';
+    const tagline1 = '# Projects ';
     const container = document.createElement('div');
     container.className = 'tagline';
 
@@ -44,16 +44,16 @@ export class Work {
   }
 
   /**
-   * Creates a work container element.
+   * Creates a project container element.
    *
    * Basically a div for person projects
    *
    * @param {string} titleText - title of the project
    * @param {string} descriptionText - project description
    * @param {string[]} imgSet - Array of imges associated with project
-   * @return {HTMLElement} - work html element
+   * @return {HTMLElement} - project html element
    */
-  _workContainer(
+  _projectContainer(
       titleText: string,
       descriptionText: string,
       imgSet?: string[]): HTMLElement {

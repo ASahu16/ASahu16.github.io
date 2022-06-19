@@ -1,9 +1,9 @@
 body {
-  section.work {
+  section.project {
     transition: 1.2s;
-    min-height: 100vh;
-    width: 100vw;
-    background-color: var(--clr-bg-work);
+    max-width: var(--max-layout-width);
+    width: 100%;
+    background-color: var(--clr-bg-projects);
     padding: 3rem 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -15,7 +15,7 @@ body {
       span {
         font-size: 3.5rem;
         font-weight: 300;
-        color: var(--clr-fg-work);
+        color: var(--clr-fg-projects);
         transition: 1.2s;
       }
     }
