@@ -104,7 +104,7 @@ export class Projects {
      _underDevelopment(): HTMLElement {
       const tagline1 = 'This website is under construction,'+
        '<br> meanwhile feel free to visit old portfolio... '+
-       '<br> or reach out to me on bellow channels... ';
+       '<br> or reach out to me on below channels... ';
       const container = document.createElement('div');
       container.className = 'tagline';
       const span1 = document.createElement('span');
