@@ -3,6 +3,9 @@ import * as projectList from '../fixture/projectsData.json';
  * Renders project section
  */
 export class Projects {
+  private readonly siteLinks = ["abhisheksahu.netlify.app",
+  "sahu.netlify.app"];
+
   /**
    * Responsible to created the whole section/screen
    */
@@ -24,14 +27,17 @@ export class Projects {
     const wrapper = document.createElement('div');
     wrapper.classList.add('project-wrapper');
     // projectSection.appendChild(this._tagline());
-    projectList.result.forEach((data) => {
-      wrapper.appendChild(
-          this._projectContainer(data.title,
-              data.description,
-              data.link,
-              data.imgSet));
-    });
-    projectSection.appendChild(wrapper);
+    projectSection.appendChild(this._underDevelopment());
+    projectSection.appendChild(this._siteLinks());
+    
+    // projectList.result.forEach((data) => {
+    //   wrapper.appendChild(
+    //       this._projectContainer(data.title,
+    //           data.description,
+    //           data.link,
+    //           data.imgSet));
+    // });
+    // projectSection.appendChild(wrapper);
     return projectSection;
   }
 
@@ -58,7 +64,7 @@ export class Projects {
    * @param {string} titleText - title of the project
    * @param {string} descriptionText - project description
    * @param {string} projectUrl - url to the project demo/code
-   * @param {string[]} imgSet - Array of imges associated with project
+   * @param {string[]} imgSet - Array of img associated with project
    * @return {HTMLElement} - project html element
    */
   _projectContainer(
@@ -89,5 +95,41 @@ export class Projects {
     itemDetail.append(title);
     container.append(itemShowcase, itemDetail);
     return container;
+  }
+
+  /**
+   * Create a tagline div
+   * @return {HTMLElement} The tagline for the project section
+   */
+     _underDevelopment(): HTMLElement {
+      const tagline1 = 'This website is under construction,'+
+       '<br> meanwhile feel free to visit old portfolio... '+
+       '<br> or reach out to me on bellow channels... ';
+      const container = document.createElement('div');
+      container.className = 'tagline';
+      const span1 = document.createElement('span');
+      span1.innerHTML = tagline1;
+      container.append(span1);
+      return container;
+    }
+
+     /**
+   * Creates a list of links to various platforms
+   * @return {HTMLElement} A list for external site links
+   */
+  _siteLinks(): HTMLElement {
+    const socialLinks: HTMLElement = document.createElement('ul');
+    socialLinks.className = 'links';
+
+    for (let i: number = 0; i < this.siteLinks.length; i += 1) {
+      const linkElement = document.createElement('li');
+      const text: HTMLElement = document.createElement('a');
+      text.setAttribute('href', `https://${this.siteLinks[i]}`);
+      text.setAttribute('target','_blank');
+      text.innerHTML = this.siteLinks[i];
+      linkElement.append(text);
+      socialLinks.appendChild(linkElement);
+    }
+    return socialLinks;
   }
 }
