@@ -37,7 +37,7 @@ export class Home {
     const span1 = document.createElement('span');
     const span2 = document.createElement('span');
     const span3 = document.createElement('span');
-    span1.innerText = tagline1;
+    // span1.innerText = tagline1;
     span2.innerText = tagline2;
     // span3.innerText = tagline3;
     container.append(span1, span2, span3);
